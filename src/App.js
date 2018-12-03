@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MainMenu from './Views/MainMenu/MainMenu';
+import Settings from './Views/Settings/Settings';
+import {Navigator} from "react-onsenui";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    constructor(props) {
+        super(props);
+        this.state = {view: 'main'}
+    }
+
+    doViewMain() {
+      this.setState({view: 'main'});
+    }
+
+    doViewSettings() {
+        this.setState({view: 'settings'})
+    }
+
+    doViewSchedules() {
+        this.setState({view: 'schedule'});
+    }
+
+    renderPage(route, navigator) {
+        route.props = route.props || {};
+        route.props.navigator = navigator;
+
+        return React.createElement(route.component, route.props);
+    }
+
+    render() {
+        return (<Navigator renderPage={this.renderPage} initialRoute={{component: MainMenu}}/>)
   }
 }
 

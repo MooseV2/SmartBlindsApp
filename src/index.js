@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-css/semantic.min.css';
+
+import 'onsenui/css/onsenui.css';
+import 'onsenui/css/onsen-css-components.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
