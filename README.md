@@ -16,3 +16,9 @@ This is an app used to control the [SmartBlindsServer](https://github.com/studio
 2. Configure the IP address of the server by clicking the settings cog
 
 3. Use the controls on the main screen to change the blind settings
+
+## Demo
+
+View a demo of the entire Smart Blinds project here:
+[Youtube Link](https://www.youtube.com/watch?v=gTskRo372m0)
+[![Watch the video](https://media.giphy.com/media/QuaFVZRVwbhLC1m7iK/giphy.gif)](https://www.youtube.com/watch?v=gTskRo372m0)
